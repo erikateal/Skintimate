@@ -40,16 +40,10 @@
                     <li class="nav-item"><a class="nav-link" href="/products/add">Add Product</a></li> -->
                 </ul>
                 <form class="d-flex">
-                  <!-- <a class="btn btn-outline-dark me-2" href="/login">Login</a>
-                  <a class="btn btn-warning" href="/signup">Create Account</a> -->
-                  <% if (!user) { %>
-                    <li class="nav-item"><a href="/login" class="nav-link">Log in</a></li>
-                    <li class="nav-item"><a href="/signup" class="nav-link">Create Account</a></li>
-                    <% } else { %>
-                        <li class="nav-item"><a href="/users/<%-user._id %>/dashboard" class="nav-link">Dashboard</a></li>
-                        <li class="nav-item"><a href="/logout" class="nav-link">Log out</a></li>
-                    <% } %>
+                  <a class="btn btn-outline-dark me-2" href="/login">Login</a>
+                  <a class="btn btn-warning" href="/signup">Create Account</a>
                 </form>
+                
             </div>
         </div>
       </nav>
