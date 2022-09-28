@@ -1,0 +1,8 @@
+.bg-image {
+  background:url("/public/imgs/skincare.jpg");  
+	height: 1000px;    
+  background-repeat:no-repeat;
+  overflow-y: hidden;
+  overflow-x: hidden;
+ }
+
