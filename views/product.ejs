@@ -28,6 +28,31 @@
     <div class="col-3 mt-5">
       <p><%= product.notes %></p>
     </div>
+
+    <div class="container">
+      <div class="row justify-content-center mt-5">
+        <ul class="row list-unstyled">
+          <% for(var i=0; i<product.comment.length; i++) {%>
+            <li class="col-6 justify-content-between mt-5">
+              <p>
+                <%= product.comment[i].body %>
+              </p>
+            </li>
+          <% } %>
+          </ul>
+
+          <form
+          class="col-1"
+          action="/product/createComment/<%= product.id %>"          
+          method="POST"
+        >
+					<label for="body">Body</label>
+					<input type="text" name="body" id="body" placeholder="add comment here">
+          <button class="btn btn-primary" type="submit">Submit</button>
+        </form>
+      </div>
+    </div>  
+    
     <div class="col-6 mt-5">
       <a class="btn btn-primary" href="/profile">Return to Profile</a>
       <a class="btn btn-primary" href="/feed">Return to Feed</a>

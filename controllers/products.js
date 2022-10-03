@@ -20,7 +20,7 @@ module.exports = {
   },
   getProduct: async (req, res) => {
     try {
-      const product = await Product.findById(req.params.id);
+      const product = await Product.findById(req.params.id).populate("comment");
       res.render("product.ejs", { product: product, user: req.user });
     } catch (err) {
       console.log(err);
@@ -32,10 +32,10 @@ module.exports = {
       const result = await cloudinary.uploader.upload(req.file.path);
 
       await Product.create({
-        title: req.body.title,
+        name: req.body.name,
         image: result.secure_url,
         cloudinaryId: result.public_id,
-        caption: req.body.caption,
+        note: req.body.note,
         likes: 0,
         user: req.user.id,
       });

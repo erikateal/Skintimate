@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
 const ProductSchema = new mongoose.Schema({
-  title: {
+  name: {
     type: String,
     required: true,
   },
@@ -13,7 +13,7 @@ const ProductSchema = new mongoose.Schema({
     type: String,
     require: true,
   },
-  caption: {
+  note: {
     type: String,
     required: true,
   },
@@ -25,10 +25,16 @@ const ProductSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: "User",
   },
+  comment: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: "Comment",
+    },
+  ],
   createdAt: {
     type: Date,
     default: Date.now,
   },
 });
 
-module.exports = mongoose.model("Post", ProductSchema);
+module.exports = mongoose.model("Product", ProductSchema);
