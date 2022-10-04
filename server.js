@@ -49,6 +49,10 @@ app.use(
 // Passport middleware
 app.use(passport.initialize());
 app.use(passport.session());
+app.use((req, res, next) => {
+  res.locals.currentUser = req.user;
+  next();
+});
 
 //Use flash messages for errors, info, ect...
 app.use(flash());
