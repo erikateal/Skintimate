@@ -1,11 +1,19 @@
 <%- include('partials/header') -%>
+
+<head>
+  <link rel="stylesheet" href="/css/style.css" />
+
+    <!-- Bootstrap CSS file -->
+    <!-- <link rel="stylesheet" href="/css/bootstrap.min.css"> -->
+</head>
+
 <div class="container">
   <div class="row mt-5">
       <div class="col-6">
           <div>
-              <p><strong>User Name</strong>: <%= user.userName %></p>
-              <p><strong>Email</strong>: <%= user.email %></p>
-              <a href="/logout" class="col-3 btn btn-primary">Logout</a>
+              <p>Welcome, <strong><%= user.userName %></strong></p>
+              <!-- <p><strong>Email</strong>: <%= user.email %></p> -->
+              <!-- <a href="/logout" class="col-3 btn btn-primary">Logout</a> -->
           </div>
           <div class="mt-5">
             <h2>Add a product</h2>
@@ -18,11 +26,11 @@
                 <label for="note" class="form-label">Notes</label>
                 <textarea class="form-control" id="note" name="note"></textarea>
               </div>
-              <!-- <div class="mb-3">
+              <div class="mb-3">
                 <label for="expDate" class="form-label">Expiration Date</label>
                 <input type="date" class="form-control date-picker" id="expDate" name="expDate" min="1899-01-01">
               </div>
-              <div class="mb-3">
+              <!-- <div class="mb-3">
                 <label for="type" class="form-label">Product Type</label>
                 <select class="form-select" id="type" name="type">
                   <option selected disabled value="">Select skincare category</option>

@@ -31,6 +31,10 @@ const ProductSchema = new mongoose.Schema({
       ref: "Comment",
     },
   ],
+  expDate: {
+    type: Date,
+    default: Date.now,
+  },
   createdAt: {
     type: Date,
     default: Date.now,

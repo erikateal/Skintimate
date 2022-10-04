@@ -36,6 +36,7 @@ module.exports = {
         image: result.secure_url,
         cloudinaryId: result.public_id,
         note: req.body.note,
+        expDate: req.body.expDate,
         likes: 0,
         user: req.user.id,
       });
