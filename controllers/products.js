@@ -2,10 +2,10 @@ const cloudinary = require("../middleware/cloudinary");
 const Product = require("../models/Product");
 
 module.exports = {
-  getProfile: async (req, res) => {
+  getDashboard: async (req, res) => {
     try {
       const products = await Product.find({ user: req.user.id });
-      res.render("profile.ejs", { products: products, user: req.user });
+      res.render("dashboard.ejs", { products: products, user: req.user });
     } catch (err) {
       console.log(err);
     }
@@ -41,7 +41,7 @@ module.exports = {
         user: req.user.id,
       });
       console.log("Product has been added!");
-      res.redirect("/profile");
+      res.redirect("/dashboard");
     } catch (err) {
       console.log(err);
     }
@@ -69,9 +69,9 @@ module.exports = {
       // Delete product from db
       await Product.remove({ _id: req.params.id });
       console.log("Deleted Product");
-      res.redirect("/profile");
+      res.redirect("/dashboard");
     } catch (err) {
-      res.redirect("/profile");
+      res.redirect("/dashboard");
     }
   },
 };

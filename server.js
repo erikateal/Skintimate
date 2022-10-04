@@ -10,6 +10,7 @@ const logger = require("morgan");
 const connectDB = require("./config/database");
 const mainRoutes = require("./routes/main");
 const productRoutes = require("./routes/products");
+// const accountRoutes = require("./routes/account");
 
 //Use .env file in config folder
 require("dotenv").config({ path: "./config/.env" });
@@ -60,6 +61,7 @@ app.use(flash());
 //Setup Routes For Which The Server Is Listening
 app.use("/", mainRoutes);
 app.use("/product", productRoutes);
+// app.use("/account", accountRoutes);
 
 /**
  * API examples routes.

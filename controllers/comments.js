@@ -15,10 +15,10 @@ module.exports = {
       });
 
       console.log("Comment has been added!");
-      res.redirect("/profile");
+      res.redirect("/dashboard");
     } catch (err) {
       console.log(err);
-      res.redirect("/profile");
+      res.redirect("/dashboard");
     }
   },
 };
