@@ -22,22 +22,31 @@
                   <input type="text" class="form-control" id="name" name="name">
               </div>
               <div class="mb-3">
-                <label for="note" class="form-label">Notes</label>
-                <textarea class="form-control" id="note" name="note"></textarea>
+                <label for="type" class="form-label">Product Type</label>
+                <select class="form-select" id="type" name="type">
+                  <option selected disabled value="">Select skincare category</option>
+                  <option value="cleanser">Cleanser</option>
+                  <option value="moisturizer">Moisturizer</option>
+                  <option value="toner">Toner</option>
+                  <option value="serum">Serum</option>
+                  <option value="oil">Oil</option>
+                  <option value="exfoliator">Exfoliator</option>
+                  <option value="sunscreen">Sunscreen</option>
+                  <option value="eyecream">Eye Cream</option>
+                  <option value="other">Other</option>
+                </select>
               </div>
               <div class="mb-3">
                 <label for="expDate" class="form-label">Expiration Date</label>
                 <input type="date" class="form-control date-picker" id="expDate" name="expDate" min="1899-01-01">
               </div>
-              <!-- <div class="mb-3">
-                <label for="type" class="form-label">Product Type</label>
-                <select class="form-select" id="type" name="type">
-                  <option selected disabled value="">Select skincare category</option>
-                </select>
-              </div> -->
               <div class="mb-3">
                 <label for="imgUpload" class="form-label">Image</label>
                 <input type="file" class="form-control" id="imageUpload" name="file">
+              </div>
+              <div class="mb-3">
+                <label for="note" class="form-label">Notes</label>
+                <textarea class="form-control" id="note" name="note"></textarea>
               </div>
               <button type="submit" class="btn btn-primary" value="Upload">Submit</button>
             </form>

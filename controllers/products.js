@@ -18,6 +18,20 @@ module.exports = {
       console.log(err);
     }
   },
+  getAccount: async (req, res) => {
+    try {
+      res.render("account.ejs");
+    } catch (err) {
+      console.log(err);
+    }
+  },
+  getWishlist: async (req, res) => {
+    try {
+      res.render("wishlist.ejs");
+    } catch (err) {
+      console.log(err);
+    }
+  },
   getProduct: async (req, res) => {
     try {
       const product = await Product.findById(req.params.id).populate("comment");
