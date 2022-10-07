@@ -1,3 +1,55 @@
 <%- include('partials/header') -%>
 
+<div class="container">
+  <div class="pb-2 mt-2 mb-4 border-bottom">
+    <h3>Profile Information</h3>
+  </div>
+    <div class="form-outline mb-4">
+      <label class="form-label" for="form3Example3">Email address</label>
+      <input type="email" id="form3Example3" class="form-control" name="email"/>
+    </div>
+    <div class="form-outline mb-4">
+      <label class="form-label" for="form3Example3">Username</label>
+      <input type="email" id="form3Example3" class="form-control" name="email"/>
+    </div>
+    <div class="form-outline mb-4">
+      <label class="form-label" for="form3Example3">Location</label>
+      <input type="email" id="form3Example3" class="form-control" name="email"/>
+    </div>
+    <button type="submit" class="btn btn-primary" value="Upload">Upload Profile</button>
+    <div>
+      <div>
+        <form action="/product/createProduct" enctype="multipart/form-data" method="POST">
+        <div class="mb-3">
+          <label for="imgUpload" class="form-label">Profile Picture</label>
+          <input type="file" class="form-control" id="imageUpload" name="file">
+        </div>
+        </form>
+      </div>
+      <button type="submit" class="btn btn-primary" value="Upload">Upload Photo</button>
+  </div>
+<br>
+  <div class="pb-2 mt-2 mb-4 border-bottom">
+    <h3>Change Password</h3>
+    </div>
+    <div class="form-outline mb-4">
+      <label class="form-label" for="form3Example4">New Password</label>
+      <input type="password" id="form3Example4" class="form-control" name="password"/>
+    </div>
+    <div class="form-outline mb-4">
+      <label class="form-label" for="form3Example4">Confirm Password</label>
+      <input type="password" id="form3Example4" class="form-control" name="password"/>
+    </div>
+    <button type="submit" class="btn btn-primary btn-block mb-4">Change Password</button>
+
+  <div class="pb-2 mt-2 mb-4 border-bottom">
+    <h3>Delete Account</h3>
+  </div>
+    <div class="form-outline mb-4">
+      <h6>You can delete your account, but keep in mind this action is irreversible.</h6>
+      <button type="submit" class="btn btn-danger btn-block mb-4">Delete my account</button>
+    </div>
+
+</div>
+
 <%- include('partials/footer') -%>

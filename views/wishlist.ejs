@@ -1,3 +1,59 @@
 <%- include('partials/header') -%>
 
+<div class="container">
+  <div class="row mt-5">
+      <div class="col-6">
+				<br>
+				<div class="mb-5">
+					<div class="p-4" style="background-color: #f8f9fa;">
+						<p class="font-italic mb-1">Seeing some products you'd like to try? Store them here for easy access!</p>
+					</div>
+				</div>
+            <h2 class="lead fw-normal mb-1">Add a product</h2>
+            <br>
+            <form action="/product/createProduct" enctype="multipart/form-data" method="POST">
+              <div class="mb-3">
+                  <label for="name" class="form-label">Product Name</label>
+                  <input type="text" class="form-control" id="name" name="name">
+              </div>
+							<div class="mb-3">
+								<label for="name" class="form-label">Price</label>
+								<input type="text" class="form-control" id="price" name="price">
+							</div>
+							<div class="mb-3">
+								<label for="name" class="form-label">Link (URL)</label>
+								<input type="text" class="form-control" id="link" name="link">
+							</div>
+              <div class="mb-3">
+                <label for="type" class="form-label">Product Type</label>
+                <select class="form-select" id="type" name="type">
+                  <option selected disabled value="">Select skincare category</option>
+                  <option value="cleanser">Cleanser</option>
+                  <option value="moisturizer">Moisturizer</option>
+                  <option value="toner">Toner</option>
+                  <option value="serum">Serum</option>
+                  <option value="oil">Oil</option>
+                  <option value="exfoliator">Exfoliator</option>
+                  <option value="sunscreen">Sunscreen</option>
+                  <option value="eyecream">Eye Cream</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div class="mb-3">
+                <label for="imgUpload" class="form-label">Image</label>
+                <input type="file" class="form-control" id="imageUpload" name="file">
+              </div>
+              <div class="mb-3">
+                <label for="note" class="form-label">Notes</label>
+                <textarea class="form-control" id="note" name="note"></textarea>
+              </div>
+              <button type="submit" class="btn btn-warning" value="Upload">Submit</button>
+            </form>
+          </div>
+      </div>
+    </div>
+
+<br>
+<br>
+
 <%- include('partials/footer') -%>
